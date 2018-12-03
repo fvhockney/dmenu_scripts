@@ -2,7 +2,7 @@
 
 choices="lock\nshutdown\nreboot\nexit"
 
-LOCKSCREEN_WALLPAPER="/home/fvhockney/Wallpapers/lock-cat.png"
+LOCKSCREEN_WALLPAPER="$HOME/Wallpapers/lock-cat.png"
 
 chosen=$(echo -e "$choices" | dmenu -i)
 
