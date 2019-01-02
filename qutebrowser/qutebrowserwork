@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "open -t https://post.sitenbau.net" >> $QUTE_FIFO
+echo "open -t https://lautag.slack.com" >> $QUTE_FIFO
+echo "open -t https://forum.laut.fm" >> $QUTE_FIFO
