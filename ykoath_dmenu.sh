@@ -15,4 +15,5 @@ if [ "$1" = -t ] || [ "$1" = --type ]; then
     xdotool type "$oauthcode"
 else
     echo "$oauthcode" | xclip -se c
+    echo "$chosen"
 fi

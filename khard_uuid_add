@@ -1,0 +1,12 @@
+#!/bin/bash
+
+DIR=$(dirname $(readlink -m $1))
+FILENAME=$(basename $1)
+if grep -Eq 'UID:[[:digit:]]' $1
+then
+    echo "$FILENAME alread has a UUID"
+else
+    UUID=$(sed 's/-//g' <<< $(uuidgen))
+    sed -i "/VERSION*/a UID:$UUID" $1
+    mv $1 ${DIR}/${UUID}.vcf
+fi
