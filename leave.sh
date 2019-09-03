@@ -10,5 +10,5 @@ case "$chosen" in
     shutdown) systemctl poweroff;;
     reboot) systemctl reboot;;
     exit) i3-msg exit;;
-    lock) i3lock --show-failed-attempts -i "$LOCKSCREEN_WALLPAPER" --ignore-empty-password &;;
+    lock) i3lock -kfe -B=1 &;;
 esac
